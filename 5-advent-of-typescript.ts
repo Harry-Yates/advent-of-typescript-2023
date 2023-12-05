@@ -21,17 +21,23 @@ type SantasList<Bad extends readonly any[], Good extends readonly any[]> = [
   ...Good
 ];
 
-/* NOTE:
-This TypeScript code defines a generic type called SantasList. It takes two type parameters: Bad and Good, both of which are readonly arrays (arrays that cannot be modified after creation).
+/* NOTES:
+This TypeScript code defines a generic type called SantasList.
 
-The type SantasList represents a list that combines two arrays, Bad and Good. It uses the spread operator (...) to concatenate the elements of the Bad array with the elements of the Good array, creating a new array that includes all the elements from both arrays.
+- Generic Type: A type that can work with different data types.
+- Type Parameters: Special placeholders for these different data types.
+- Extends: This keyword is used to define constraints on a type parameter. It's similar to saying "should meet the following requirements."
+- Readonly: This keyword is used to indicate that a type, such as an array or tuple, is read-only, meaning its values cannot be modified after they are created. In other words, you can't add, remove, or change elements in a read-only array or tuple once it's defined.
 
-For example, if you have two arrays:
-Bad: ["coal", "switch"]
-Good: ["toy", "candy"]
+SantasList takes two type parameters:
+- Bad: A readonly array (cannot be modified) of any type.
+- Good: A readonly array of any type.
 
-Then using SantasList<Bad, Good> would result in the following array:
-["coal", "switch", "toy", "candy"]
+Now, what does SantasList do?
+- It represents a list that combines two arrays, Bad and Good.
+- The spread operator (...) is used to concatenate elements of the Bad array with the elements of the Good array.
+- The result is a new array containing all elements from both arrays.
+- This preserves the order and immutability (cannot be changed) of the original arrays.
 
-This type is a way to combine two readonly arrays into a single array, preserving their order and immutability.
+In summary, SantasList is a flexible tool for combining two readonly arrays while keeping their elements in order and ensuring they can't be modified later. It's great for maintaining data integrity.
 */
