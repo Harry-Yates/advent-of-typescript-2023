@@ -21,3 +21,12 @@ type GiftWrapper<Present, From, To> = {
   from: From;
   to: To;
 };
+
+/* NOTE:
+This code defines a TypeScript generic type called GiftWrapper. It takes three type parameters: Present, From, and To. This type represents a structure for wrapping a gift. It has three properties:
+- 'present' of type Present: This property represents the gift itself and can have any type assigned to it.
+- 'from' of type From: This property represents the sender of the gift and can also have any type assigned to it.
+- 'to' of type To: This property represents the recipient of the gift and can have any type assigned to it.
+
+By using generics, this type can be customized to work with different types of presents, senders, and recipients, making it flexible and reusable.
+*/

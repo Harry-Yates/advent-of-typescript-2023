@@ -17,3 +17,7 @@
 */
 
 type SantasFavoriteCookies = "ginger-bread" | "chocolate-chip";
+
+/* NOTE:
+This code defines a TypeScript type called SantasFavoriteCookies, which is a "String Literal Union Type." This means it can only be one of two specific words: "ginger-bread" or "chocolate-chip." It restricts the allowed values for variables or properties of this type to just these two options.
+*/

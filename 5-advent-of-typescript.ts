@@ -20,3 +20,18 @@ type SantasList<Bad extends readonly any[], Good extends readonly any[]> = [
   ...Bad,
   ...Good
 ];
+
+/* NOTE:
+This TypeScript code defines a generic type called SantasList. It takes two type parameters: Bad and Good, both of which are readonly arrays (arrays that cannot be modified after creation).
+
+The type SantasList represents a list that combines two arrays, Bad and Good. It uses the spread operator (...) to concatenate the elements of the Bad array with the elements of the Good array, creating a new array that includes all the elements from both arrays.
+
+For example, if you have two arrays:
+Bad: ["coal", "switch"]
+Good: ["toy", "candy"]
+
+Then using SantasList<Bad, Good> would result in the following array:
+["coal", "switch", "toy", "candy"]
+
+This type is a way to combine two readonly arrays into a single array, preserving their order and immutability.
+*/

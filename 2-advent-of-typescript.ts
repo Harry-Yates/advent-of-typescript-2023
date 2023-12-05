@@ -17,3 +17,9 @@
 */
 
 type CookieSurveyInput<T> = keyof T;
+
+/* NOTE:
+This code defines a TypeScript type called CookieSurveyInput, which is a generic type. It uses the 'keyof' keyword to extract keys from an object of type T. This allows you to create a type that represents the keys of any object you provide as a type parameter (T). 
+
+For example, if T is an object with keys "chocolate," "sugar," and "gingerBread," then CookieSurveyInput<T> would represent the type "chocolate" | "sugar" | "gingerBread," which includes all possible keys from the object T.
+*/
