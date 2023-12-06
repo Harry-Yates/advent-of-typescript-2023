@@ -35,9 +35,9 @@ type FilterChildrenBy<T, Exclusion> = T extends Exclusion ? never : T;
 /* NOTE:
 FilterChildrenBy<T, Exclusion> is a TypeScript **utility type for filtering types**. 
 
-- T is a **union type** (e.g., 'naughty' | 'nice' | 'unknown')
-- **Exclusion** is the type to exclude from T. 
-- **Extends** is used in a conditional type. It checks if the type T can be assigned to Exclusion. If it can, the result is **never** (which is TypeScript's way of saying "no type"); if it cannot, the result is T.
+- T is a union type (e.g., 'naughty' | 'nice' | 'unknown')
+- Exclusion is the type to exclude from T. 
+- Extends is used in a conditional type. It checks if the type T can be assigned to Exclusion. If it can, the result is never (which is TypeScript's way of saying "no type"); if it cannot, the result is T.
 
 The expression T extends Exclusion ? never : T checks each member of T: if it matches Exclusion, it's replaced with never, effectively removing it. For instance, if T is 'naughty' | 'nice' and Exclusion is 'naughty', FilterChildrenBy<T, Exclusion> results in 'nice'.
 */
